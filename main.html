@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+
+        <div class="ruler">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="caption">Ruler</h1>
+                        <form name="rulerForm" id="rulerForm">
+                            <div id="rulerBlock">
+                                <div id="closeBlocks" style="display:none;">X
+                            </div> 
+                            <div id="rulerSection"> 
+                            <select class="type" id="operationBox">
+                                <option value="" selected disabled hidden>Select Metric</option>
+                                <option value="click">Click</option>
+                                <option value="imp">Imp</option>
+                                <option value="cost">Cost</option>
+                                <option value="amount">Amount</option>
+                            </select>
+                            <select class="operator" id="operatorBox">
+                                <option value="" selected disabled hidden>Select Operator</option>
+                                <option value=">">></option>
+                                <option value=">=">>=</option>
+                                <option value="=">=</option>
+                            </select>
+                            <input type="text" id="quantitySection" placeholder="Amount">
+                            <button type="button" value="increment" id="incButton">+</button>
+                            <button type="button" value="decrement" id="decButton" style="display:none;">-</button>
+                        </div>
+                    </div>
+                    <div id="sourceBlock"> <!-- Hidden clone block start-->
+                        <div id="closeBlocks">X</div> 
+                    <div id="sourceDiv"> 
+                    <select class="type" id="operationBox">
+                        <option value="" selected disabled hidden>Select Metric</option>
+                        <option value="click">Click</option>
+                        <option value="imp">Imp</option>
+                        <option value="cost">Cost</option>
+                        <option value="amount">Amount</option>
+                    </select>
+                    <select class="operator" id="operatorBox">
+                        <option value="" selected disabled hidden>Select Operator</option>
+                        <option value=">">></option>
+                        <option value=">=">>=</option>
+                        <option value="=">=</option>
+                    </select>
+                    <input type="text" id="quantitySection" placeholder="Amount">
+                    <button type="button" value="increment" id="incButton">+</button>
+                    <button type="button" value="decrement" id="decButton">-</button>
+                </div>
+            </div> <!-- Hidden clone block end-->
+                        <div id="clones"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="clonedBlock"></div>
+            </div>
+        </div>
+        <div class="ortheAdder">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button type="button" value="or" id="orButton">Or</button>
+                        </div>
+                    </div>
+            </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="submitSection">
+                        <input type="submit" value="Create">
+                </div>
+            </div>
+        </div>
+    </form> 
+    </div>
+</div>
+
+
+
+
+
+        <footer>
+            <script src="assets/js/scripts.js"></script>
+            
+        </footer>
+    </body>
+</html>
