@@ -62,10 +62,11 @@ function copyBlock(){
    let br = document.createElement('br');
    let theclonedBlock = document.getElementById('clonedBlock').appendChild(clone);
    theclonedBlock.setAttribute("id","clonedDiv");
+   theclonedBlock.classList.add('block');
    document.getElementById('clonedBlock').appendChild(br);
    hr.setAttribute('id','clonedHrInBlock');
-   br.setAttribute('id','clonedBrInBlock');   
-   dataNumber = parseInt(document.getElementById('clonedDiv').getAttribute('data-order'));
+   br.setAttribute('id','clonedBrInBlock');  
+   dataNumber = parseInt(document.getElementsByClassName('block')[0].getAttribute('data-order'));
    if(isNaN(dataNumber)){
       dataNumber=1;
       theclonedBlock.setAttribute('data-order',dataNumber);
