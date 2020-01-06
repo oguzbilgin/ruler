@@ -1,10 +1,10 @@
-$('#incButton').click(function () {
+$('#incButton').click(function () {   //cloning the input field
     $('#sourceDiv').clone(true).appendTo('#clones');
-});                              //cloning the input field
+});                              
 
 
-$('#orButton').click(function () {
-    $('#sourceBlock').clone(true).appendTo('#clonedBlock');
+$('#orButton').click(function () {  //cloning the input block
+    $('#sourceBlock').clone(true).appendTo('#clonedBlock').show();
 });
 
 function on(elSelector, eventName, selector, fn) {
@@ -32,9 +32,34 @@ function on(elSelector, eventName, selector, fn) {
  on ('#clones', 'click','#incButton', function(e){                   // clone event attached to the cloned button
  
     $('#sourceDiv').clone(true).appendTo('#clones');
+    
  });
 
  on ('#clones', 'click','#decButton', function(e){                  // remove event attached to the cloned button
+ 
+    $(this).closest('#sourceDiv').remove();
+ });
+
+ on ('#clonedBlock', 'click','#closeBlocks', function(e){                  // remove block event attached to the cloned button
+    
+    $(this).closest('#sourceBlock').remove();
+ });
+
+on ('#clonedBlock', 'click','#incButton', function(e){                  // clone event in block attached to the cloned button
+
+    var $clonedSource = $('#sourceDiv').clone(true);
+
+    var $destination = $(this).closest('#sourceBlock').find('.defaultTemplate:last');
+
+    var $decBtn = $(this).closest('#sourceBlock').find('#decButton');
+
+    $clonedSource.appendTo(this).insertAfter($destination);
+
+    $decBtn.show();
+    
+ })
+
+ on ('#clonedBlock', 'click','#decButton', function(e){                  // remove event attached to the cloned button
  
     $(this).closest('#sourceDiv').remove();
  });
