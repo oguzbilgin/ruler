@@ -49,15 +49,13 @@ on ('#clonedBlock', 'click','#incButton', function(e){                  // clone
 
     var $clonedSource = $('#sourceDiv').clone(true);
 
-    var $destination = $(this).closest('#sourceBlock').find('.defaultTemplate:last');
-
-    var $decBtn = $(this).closest('#sourceBlock').find('#decButton');
-
-    $clonedSource.appendTo(this).insertAfter($destination);
-
-    $decBtn.show();
+    var $destination = $(this).closest('#sourceBlock').find('.defaultTemplate').last();
     
- })
+    $clonedSource.appendTo('#sourceBlock').insertAfter($destination);
+
+    $clonedSource.find('#decButton').show();
+    
+ });
 
  on ('#clonedBlock', 'click','#decButton', function(e){                  // remove event attached to the cloned button
  
