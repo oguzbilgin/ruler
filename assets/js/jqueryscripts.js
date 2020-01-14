@@ -61,3 +61,15 @@ on ('#clonedBlock', 'click','#incButton', function(e){                  // clone
  
     $(this).closest('#sourceDiv').remove();
  });
+
+
+$('#rulerForm').submit(function (e) {
+    e.preventDefault();
+var data ={};
+var formData = $(this).serializeArray();
+
+data = JSON.stringify(formData);
+console.log(data);
+
+});
+
