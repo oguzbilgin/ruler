@@ -77,8 +77,6 @@ $('#rulerForm').submit(function (e) {
     e.preventDefault();
 var data = {};
 var formData = $(this).serializeArray();
-
-
 data = JSON.stringify(formData);
 console.log(data);
 
