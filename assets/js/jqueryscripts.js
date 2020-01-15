@@ -65,9 +65,8 @@ on ('#clonedBlock', 'click','#incButton', function(e){                  // clone
 
 $('#rulerForm').submit(function (e) {
     e.preventDefault();
-var data ={};
+var data = {};
 var formData = $(this).serializeArray();
-
 data = JSON.stringify(formData);
 console.log(data);
 
