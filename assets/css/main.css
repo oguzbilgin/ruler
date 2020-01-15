@@ -107,15 +107,17 @@ input[type=text] {
     color:#0c64fd;
 }
 
-
 #sourceBlock{
     display:none;
-    border-top: 1px solid white;
 }
 
 #sourceBlock #decButton{
     display:none;
 }
+#clonedSourceBlock{
+    border-top: 1px solid white;
+}
+
 
 .ruler h1{
     margin-top:1rem;
@@ -136,6 +138,18 @@ input[type=text] {
     margin-left:9rem;
 }
 #sourceDiv{
+    margin-bottom:1rem;
+}
+
+#clonedSourceDivInBlock{
+    margin-bottom:1rem;
+}
+
+#clonedSourceDiv{
+    margin-bottom:1rem;
+}
+
+#templateSourceDiv{
     margin-bottom:1rem;
 }
 
